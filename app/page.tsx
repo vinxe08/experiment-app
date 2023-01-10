@@ -5,7 +5,7 @@ import SignUpComponent from './SignUpComponent'
 
 async function HomePage() {
   const session = await unstable_getServerSession()
-
+  console.log("SESSION: ",session)
   return (
     <Providers session={session}>
       <SignUpComponent />
