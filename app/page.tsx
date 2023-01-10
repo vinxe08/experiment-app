@@ -8,7 +8,10 @@ async function HomePage() {
   console.log("SESSION: ",session)
   return (
     <Providers session={session}>
-      <SignUpComponent />
+      { !session 
+          ? <SignUpComponent />
+          : <h1>Hello</h1>
+      }
     </Providers>
   )
 }
