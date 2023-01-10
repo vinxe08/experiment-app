@@ -10,7 +10,7 @@ async function HomePage() {
     <Providers session={session}>
       { !session 
           ? <SignUpComponent />
-          : <h1>Hello</h1>
+          : <h1>Hello! Welcome {session.user?.name} </h1>
       }
     </Providers>
   )
